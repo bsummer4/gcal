@@ -1,0 +1,33 @@
+name:                gcal
+version:             0.1.0.0
+synopsis:            Visualize Google Calendar Events
+description:         Visualize Google Calendar Events
+homepage:            github.com/bsummer4/gcal
+license:             AGPL-3
+license-file:        LICENSE
+author:              Benjamin Summers
+maintainer:          ben@benjaminsummers.net
+category:            Visualization
+build-type:          Simple
+cabal-version:       >=1.10
+
+source-repository head
+  type:     git
+  location: https://github.com/bsummer4/gcal
+
+executable gcal
+  main-is:             Main.hs
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+
+  build-depends:       base >=4.7 && <4.8, wreq, lens, bytestring,
+                       text, containers, http-types, servant-server,
+                       wai, warp, transformers
+
+  default-extensions: DeriveFoldable, DeriveFunctor, DeriveGeneric,
+                      DeriveTraversable, FlexibleContexts,
+                      FlexibleInstances, LambdaCase, MultiParamTypeClasses,
+                      OverloadedStrings, RecordWildCards,
+                      ScopedTypeVariables, TupleSections, TypeOperators,
+                      UnicodeSyntax, NoImplicitPrelude, StandaloneDeriving

@@ -1,0 +1,7 @@
+Parse error:
+  ByteString -   
+              ^
+(line 1, column 13):
+unexpected end of input
+expecting letter
+Bad symbol
